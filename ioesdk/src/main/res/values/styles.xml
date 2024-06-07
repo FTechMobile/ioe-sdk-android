@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <style name="FBaseTheme" parent="Theme.MaterialComponents.Light.NoActionBar">
+        <item name="windowNoTitle">true</item>
+        <item name="android:windowNoTitle">true</item>
+        <item name="android:windowContentOverlay">@null</item>
+        <item name="android:windowBackground">@color/ioe_color_white</item>
+        <item name="android:colorBackgroundCacheHint">@null</item>
+        <item name="android:windowIsTranslucent">true</item>
+    </style>
+
+    <style name="StyleNavigationBar">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">@dimen/fbase_dimen_50</item>
+        <item name="android:background">@color/ioe_color_transparent</item>
+    </style>
+</resources>

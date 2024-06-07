@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources xmlns:tools="http://schemas.android.com/tools">
+
+    <string name="empty_secret_key">Secret Key chưa được nhập</string>
+    <string name="empty_app_id">App ID chưa được nhập</string>
+
+    <string name="empty_reference_text">Reference Text chưa được nhập</string>
+    <string name="empty_english_accent">English Accent chưa được nhập</string>
+    <string name="english_accent_value">en-us</string>
+
+    <string name="empty_file">File không có giá trị</string>
+    <string name="empty_request_id">Request id không có giá trị</string>
+
+    <string name="ioe_success">Thành công</string>
+    <string name="ioe_failure">Thất bại</string>
+    <string name="ioe_loading">Đang tải…</string>
+
+    <string name="ioe_internal_server_error">Lỗi nội bộ máy chủ</string>
+    <string name="ioe_dont_recogize_pronunciation">Không nhận ra phát âm</string>
+    <string name="ioe_bad_request">Lỗi xử lý truy vấn</string>
+    <string name="ioe_dont_connect_to_server">Không thể kết nối đến server</string>
+    <string name="ioe_init_not_success">Khởi tạo sdk thất bại</string>
+
+    <string name="ioe_unknown_error">Không nhận diện được, vui lòng thử lại</string>
+    <string name="ioe_no_network">Vui lòng kiểm tra lại kết nối và thử lại</string>
+    <string name="ioe_sever_time_out">Server không phản hồi</string>
+    <string name="ioe_session_expire">Phiên làm việc hết hạn.</string>
+    <string name="message_no_detect_speech">Không phát hiện giọng nói</string>
+    <string name="message_error_record_process">Xảy ra lỗi trong quá trinh ghi âm</string>
+    <string name="message_error_evaluate_process">Xảy ra lỗi trong quá trình đánh giá</string>
+    <string name="message_permission_audio_denied">Record audio permission denied!</string>
+    <string name="message_recorder_not_initial">IOE recorder not initial</string>
+    <string name="message_sdk_not_initial">IOE sdk not initial</string>
+
+</resources>

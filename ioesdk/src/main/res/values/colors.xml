@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="ioe_color_primary">#1080EC</color>
+    <color name="ioe_color_black">#313C4B</color>
+    <color name="ioe_color_gray">#7A8086</color>
+    <color name="ioe_color_gray_light">#A3A8AF</color>
+    <color name="ioe_color_white">#FFFFFF</color>
+    <color name="ioe_color_transparent">#FFFFFFFF</color>
+    <color name="ioe_color_background">#F4F4F5</color>
+
+</resources>

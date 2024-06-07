@@ -1,0 +1,99 @@
+plugins {
+    id 'com.android.library'
+    id 'org.jetbrains.kotlin.android'
+    id 'kotlin-kapt'
+    id 'kotlin-parcelize'
+}
+
+android {
+    namespace 'ai.ftech.ioesdk'
+    compileSdk 33
+
+    defaultConfig {
+        minSdk 24
+        targetSdk 33
+
+        testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
+        consumerProguardFiles "consumer-rules.pro"
+    }
+
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+        }
+    }
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_1_8
+        targetCompatibility JavaVersion.VERSION_1_8
+    }
+    kotlinOptions {
+        jvmTarget = '1.8'
+    }
+}
+
+apply from: "$rootDir/gradle-mvn-ioe-push.gradle"
+
+dependencies {
+
+    //region kotlin
+
+    implementation rootProject.ext.kotlinDependencies.kotlin
+    implementation rootProject.ext.refection.kotlin
+    //endregion
+
+    //region kotlin ktx
+    implementation rootProject.ext.androidKTXDependencies.coreKTX
+    implementation rootProject.ext.androidKTXDependencies.fragmentKTX
+    implementation rootProject.ext.androidKTXDependencies.lifecycleKTX
+    implementation rootProject.ext.androidKTXDependencies.livedataKTX
+    implementation rootProject.ext.androidKTXDependencies.viewmodelKTX
+    //endregion
+
+    //region androidx
+    implementation rootProject.ext.androidXDependencies.appCompat
+    implementation rootProject.ext.androidXDependencies.constraintLayout
+    implementation rootProject.ext.androidXDependencies.savedStateViewModel
+    //endregion
+
+    //region test
+    testImplementation rootProject.ext.testDependencies.junit
+    androidTestImplementation rootProject.ext.testDependencies.junitExt
+    androidTestImplementation rootProject.ext.testDependencies.espressoCore
+    //endregion
+
+    //region coroutines
+    implementation rootProject.ext.coroutinesDependencies.core
+    implementation rootProject.ext.coroutinesDependencies.android
+    //endregion
+
+    //region material
+    implementation rootProject.ext.materialDependency.material
+    //endregion
+
+    //region glide
+    implementation rootProject.ext.glideDependency.runtime
+    implementation rootProject.ext.glideDependency.transformation
+    //endregion
+
+    //region network
+    implementation rootProject.ext.networkDependencies.retrofit
+    implementation rootProject.ext.networkDependencies.retrofitGsonConverter
+    implementation rootProject.ext.networkDependencies.retrofitScalarConverter
+    implementation rootProject.ext.networkDependencies.logging
+    //endregion
+
+    //region camera
+    implementation rootProject.ext.cameraViewNatario1Dependencies.cameraview
+    //endregion
+
+    //ml kit
+    implementation rootProject.ext.mlKitDependencies.mlKit
+
+    implementation rootProject.ext.loopViewPagerDependencies.loopViewPager
+
+    implementation rootProject.ext.eventBusDependencies.eventbus
+
+    //speech detection
+    implementation rootProject.ext.speechDetectionDependencies.speechDetect
+}
