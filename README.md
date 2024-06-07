@@ -13,17 +13,7 @@ allprojects {
     repositories {
         google()  
         mavenCentral()
-        maven {
-            url 'https://gitlab.com//api/v4/projects/40140113/packages/maven'
-            allowInsecureProtocol true
-            credentials(HttpHeaderCredentials) {
-                name = "Private-Token"
-                value = "{SDK_PRIVATE_KEY}"
-            }
-            authentication {
-                header(HttpHeaderAuthentication)
-            }
-        }
+        maven { url 'https://jitpack.io' } <- add this line
     }
 }
 
@@ -39,17 +29,7 @@ dependencyResolutionManagement {
     repositories {
         google()
         mavenCentral()
-        maven {
-            url 'https://gitlab.com//api/v4/projects/40140113/packages/maven'
-            allowInsecureProtocol true
-            credentials(HttpHeaderCredentials) {
-                name = "Private-Token"
-                value = "{SDK_PRIVATE_KEY}"
-            }
-            authentication {
-                header(HttpHeaderAuthentication)
-            }
-        }
+        maven { url 'https://jitpack.io' } <- add this line
     }
 }
 ```
@@ -59,7 +39,7 @@ dependencyResolutionManagement {
 ``` groovy 
 dependencies {
 ...
-    implementation 'ai.ftech:ioesdk:1.0.0'
+      implementation "com.github.ftechmobile:ioe-sdk-android:1.0.7"
 }
 ```
 
