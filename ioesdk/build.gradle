@@ -7,7 +7,7 @@ plugins {
 }
 
 group = 'com.github.ftechmobile'
-version = '1.0.6'
+version = '1.0.7'
 
 android {
     namespace 'ai.ftech.ioesdk'
@@ -107,8 +107,8 @@ afterEvaluate {
             release(MavenPublication) {
                 from components.release
                 groupId = 'com.github.ftechmobile'
-                artifactId = 'ioesdk'
-                version = '1.0.6'
+                artifactId = 'ioe-sdk-android'
+                version = '1.0.7'
             }
         }
     }
