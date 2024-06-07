@@ -3,7 +3,11 @@ plugins {
     id 'org.jetbrains.kotlin.android'
     id 'kotlin-kapt'
     id 'kotlin-parcelize'
+    id 'maven-publish'
 }
+
+group = 'com.github.ftechmobile'
+version = '1.0.0'
 
 android {
     namespace 'ai.ftech.ioesdk'
@@ -31,8 +35,6 @@ android {
         jvmTarget = '1.8'
     }
 }
-
-apply from: "$rootDir/gradle-mvn-ioe-push.gradle"
 
 dependencies {
 
@@ -96,4 +98,18 @@ dependencies {
 
     //speech detection
     implementation rootProject.ext.speechDetectionDependencies.speechDetect
+}
+
+afterEvaluate {
+    publishing {
+        publications {
+            // Creates a Maven publication called "release".
+            release(MavenPublication) {
+                from components.release
+                groupId = 'com.github.ftechmobile'
+                artifactId = 'ioe-sdk-android'
+                version = '1.0.0'
+            }
+        }
+    }
 }
