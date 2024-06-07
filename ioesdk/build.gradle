@@ -7,7 +7,7 @@ plugins {
 }
 
 group = 'com.github.ftechmobile'
-version = '1.0.4'
+version = '1.0.5'
 
 android {
     namespace 'ai.ftech.ioesdk'
@@ -100,30 +100,16 @@ dependencies {
     implementation rootProject.ext.speechDetectionDependencies.speechDetect
 }
 
-publishing {
-    publications {
-        release(MavenPublication) {
-            groupId = 'com.github.ftechmobile'
-            artifactId = 'ioe-sdk-android'
-            version = '1.0.4'
-
-            afterEvaluate {
+afterEvaluate {
+    publishing {
+        publications {
+            // Creates a Maven publication called "release".
+            release(MavenPublication) {
                 from components.release
+                groupId = 'com.github.ftechmobile'
+                artifactId = 'android-example'
+                version = '1.0.5'
             }
         }
     }
 }
-
-//afterEvaluate {
-//    publishing {
-//        publications {
-//            // Creates a Maven publication called "release".
-//            release(MavenPublication) {
-//                from components.release
-//                groupId = 'com.github.ftechmobile'
-//                artifactId = 'ioe-sdk-android'
-//                version = '1.0.2'
-//            }
-//        }
-//    }
-//}
