@@ -74,19 +74,19 @@ internal class IOEAudioRecorder(context: Context) : IAudioRecorder {
 
     private fun evaluateSpeechAudioRecord() {
         if (fileRecord != null) {
-            val detectSpeed = vad.classifyAudio(fileRecord!!.readBytes())
-            val hasSpeech = if (detectSpeed.label == LABEL_SPEECH) {
-                detectSpeed.score >= 0.5
-            } else {
-                false
-            }
-            Log.d("IOEAudioRecorder", "detect: ${detectSpeed.label}: ${detectSpeed.score}")
-            if (hasSpeech) {
+//            val detectSpeed = vad.classifyAudio(fileRecord!!.readBytes())
+//            val hasSpeech = if (detectSpeed.label == LABEL_SPEECH) {
+//                detectSpeed.score >= 0.5
+//            } else {
+//                false
+//            }
+//            Log.d("IOEAudioRecorder", "detect: ${detectSpeed.label}: ${detectSpeed.score}")
+//            if (hasSpeech) {
                 mListenerRecording?.onComplete(fileRecord!!)
-            } else {
-                mListenerRecording?.onFail(getAppString(R.string.message_no_detect_speech))
-                FileUtils.deleteFile(fileRecord!!.absolutePath)
-            }
+//            } else {
+//                mListenerRecording?.onFail(getAppString(R.string.message_no_detect_speech))
+//                FileUtils.deleteFile(fileRecord!!.absolutePath)
+//            }
         } else {
             mListenerRecording?.onFail(getAppString(R.string.message_error_record_process))
         }

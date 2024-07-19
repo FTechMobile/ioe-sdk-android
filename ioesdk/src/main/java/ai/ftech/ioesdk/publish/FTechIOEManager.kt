@@ -190,7 +190,7 @@ object FTechIOEManager {
             return
         }
 
-        ioeAudioRecord!!.registerRecordingListener(object : IAudioRecorder.IRecordingListener {
+        ioeAudioRecord?.registerRecordingListener(object : IAudioRecorder.IRecordingListener {
             override fun onStart() {
                 mRecordingCallback?.onStart()
             }
@@ -247,7 +247,7 @@ object FTechIOEManager {
             return
         }
 
-        ioeAudioRecord!!.stop()
+        ioeAudioRecord?.stop()
     }
 
     private fun executeEvaluatePronunciation(fileRecordPath: String) {

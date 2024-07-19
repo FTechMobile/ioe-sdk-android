@@ -13,6 +13,6 @@ class StartRecordAction : BaseAction<StartRecordAction.StartRecordRV, StartRecor
     class StartRecordRV(var referenceText: String, var languageAccent: LanguageAccent, var extraData: String?) : RequestValue
 
     enum class LanguageAccent(val value : String){
-        EN_US("en-us")
+        EN_US("en-gb")
     }
 }
