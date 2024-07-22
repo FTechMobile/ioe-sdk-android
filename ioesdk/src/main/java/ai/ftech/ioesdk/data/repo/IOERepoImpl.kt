@@ -73,7 +73,7 @@ class IOERepoImpl : BaseRepo(), IIOERepo {
                     throw APIException(DONT_CONNECT_TO_SERVER, getAppString(R.string.ioe_dont_connect_to_server))
                 }
                 else -> {
-                    throw APIException(BAD_REQUEST, getAppString(R.string.ioe_bad_request))
+                    throw APIException(data.body()?.code ?: BAD_REQUEST, data.body()?.message ?: getAppString(R.string.ioe_bad_request))
                 }
             }
         } else {
@@ -98,7 +98,7 @@ class IOERepoImpl : BaseRepo(), IIOERepo {
                     throw APIException(DONT_CONNECT_TO_SERVER, getAppString(R.string.ioe_dont_connect_to_server))
                 }
                 else -> {
-                    throw APIException(BAD_REQUEST, getAppString(R.string.ioe_bad_request))
+                    throw APIException(data.body()?.code ?: BAD_REQUEST, data.body()?.message ?: getAppString(R.string.ioe_bad_request))
                 }
             }
         } else {
